@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -32,4 +35,9 @@
             android:id="@+id/action_registerFragment_to_loginFragment2"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="br.com.emanuel.desafiofirebase.games.view.GamesFragment"
+        android:label="fragment_games"
+        tools:layout="@layout/fragment_games" />
 </navigation>
