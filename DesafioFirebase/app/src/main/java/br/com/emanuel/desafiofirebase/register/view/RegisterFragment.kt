@@ -51,7 +51,7 @@ class RegisterFragment : Fragment() {
 
         initializeViews()
         btnCreateAccount.setOnClickListener {
-            if (validaCampos()) {
+            if (validateFields()) {
                 createAccount(
                     edtNameRegister.text.toString(),
                     edtEmailRegister.text.toString(),
@@ -80,7 +80,7 @@ class RegisterFragment : Fragment() {
 
     }
 
-    private fun validaCampos(): Boolean {
+    private fun validateFields(): Boolean {
         var response = true
 
         if (edtNameRegister.text.isNullOrBlank()) {
