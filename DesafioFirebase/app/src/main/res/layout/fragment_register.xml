@@ -11,7 +11,7 @@ tools:context=".register.view.RegisterFragment">
         android:id="@+id/card"
         android:layout_width="@dimen/dm_300dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/dm_8dp"
         app:cardBackgroundColor="@color/color_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,17 +22,19 @@ tools:context=".register.view.RegisterFragment">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="@dimen/dm_16dp"
-            android:paddingVertical="@dimen/dm_24dp"
+            android:paddingTop="@dimen/dm_8dp"
+            android:paddingBottom="@dimen/dm_16dp"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textField"
+                android:id="@+id/edtLayoutNameRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNameRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
@@ -40,14 +42,15 @@ tools:context=".register.view.RegisterFragment">
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textField1"
+                android:id="@+id/edtLayoutEmailRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dm_16dp"
+                android:layout_marginTop="@dimen/dm_8dp"
                 android:hint="@string/email"
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
@@ -55,14 +58,15 @@ tools:context=".register.view.RegisterFragment">
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textField3"
+                android:id="@+id/edtLayoutPasswordRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dm_16dp"
+                android:layout_marginTop="@dimen/dm_8dp"
                 android:hint="@string/password"
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPasswordRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -70,14 +74,15 @@ tools:context=".register.view.RegisterFragment">
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textField4"
+                android:id="@+id/edtLayoutRepeatPasswordRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dm_16dp"
+                android:layout_marginTop="@dimen/dm_8dp"
                 android:hint="@string/repeat_password"
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtRepeatPasswordRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -85,15 +90,14 @@ tools:context=".register.view.RegisterFragment">
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/textButton"
+                android:id="@+id/btnCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dm_24dp"
-                android:text="@string/log_in"
+                android:text="@string/create_account"
                 android:textColor="@color/color_white"
                 app:backgroundTint="@color/colorAccent"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                />
+                style="@style/Widget.MaterialComponents.Button.TextButton" />
 
         </LinearLayout>
 
