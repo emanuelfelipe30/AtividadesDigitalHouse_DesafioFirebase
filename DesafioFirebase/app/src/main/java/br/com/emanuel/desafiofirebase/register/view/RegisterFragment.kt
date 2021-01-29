@@ -132,7 +132,9 @@ class RegisterFragment : Fragment() {
                         Toast.makeText(
                             _myView.context, "User successfully created", Toast.LENGTH_SHORT
                         ).show()
-                        Navigation.findNavController(_myView).navigate(R.id.loginFragment)
+                        Navigation.findNavController(requireView()).popBackStack(
+                            R.id.registerFragment, true
+                        )
                     }
 
                 } else {
