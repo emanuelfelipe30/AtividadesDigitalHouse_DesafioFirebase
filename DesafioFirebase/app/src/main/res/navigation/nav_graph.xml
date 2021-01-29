@@ -39,5 +39,14 @@
         android:id="@+id/gamesFragment"
         android:name="br.com.emanuel.desafiofirebase.games.view.GamesFragment"
         android:label="fragment_games"
-        tools:layout="@layout/fragment_games" />
+        tools:layout="@layout/fragment_games" >
+        <action
+            android:id="@+id/action_gamesFragment_to_gameEditFragment"
+            app:destination="@id/gameEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameEditFragment"
+        android:name="br.com.emanuel.desafiofirebase.gameedit.view.GameEditFragment"
+        android:label="fragment_game_edit"
+        tools:layout="@layout/fragment_game_edit" />
 </navigation>

@@ -33,6 +33,12 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:26.2.0')
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-auth:20.0.2'
+    implementation 'com.google.firebase:firebase-database:19.6.0'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+    implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
+
+    //circle image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDependency

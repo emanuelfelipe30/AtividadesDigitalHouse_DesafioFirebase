@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import br.com.emanuel.desafiofirebase.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class GamesFragment : Fragment() {
 
@@ -19,13 +20,10 @@ class GamesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        removeSplashScreenOfBackStack()
         removeLoginScreenOfBackStack()
-    }
-
-    private fun removeSplashScreenOfBackStack() {
-        Navigation.findNavController(requireView()).popBackStack(
-            R.id.splashFragment, true)
+        view.findViewById<FloatingActionButton>(R.id.fabNewGame).setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.gameEditFragment)
+        }
     }
 
     private fun removeLoginScreenOfBackStack() {
