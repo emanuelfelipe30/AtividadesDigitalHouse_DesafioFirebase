@@ -43,7 +43,6 @@ class LoginFragment : Fragment() {
         _myView = view
         _auth = FirebaseAuth.getInstance()
 
-        removeSplashScreenOfBackStack()
         initializeViews()
 
         btnLogin.setOnClickListener {
@@ -59,11 +58,6 @@ class LoginFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.registerFragment)
         }
 
-    }
-
-    private fun removeSplashScreenOfBackStack() {
-        Navigation.findNavController(requireView()).popBackStack(
-            R.id.splashFragment, true)
     }
 
     private fun initializeViews() {
@@ -108,7 +102,9 @@ class LoginFragment : Fragment() {
         activity?.let {
             _auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(it) { task ->
                 if (task.isSuccessful) {
-                    Navigation.findNavController(_myView).navigate(R.id.gamesFragment)
+                    Navigation.findNavController(_myView).navigate(
+                        LoginFragmentDirections.actionLoginFragmentToGamesFragment()
+                    )
                 } else {
                     Log.w("TAG", "signInWithEmail:failure", task.exception)
                     Toast.makeText(

@@ -10,12 +10,14 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import br.com.emanuel.desafiofirebase.R
+import com.google.firebase.auth.FirebaseAuth
 
 private const val SPLASH_DURATION = 4000L
 
 class SplashFragment : Fragment() {
 
     private lateinit var _myView: View
+    private lateinit var _auth: FirebaseAuth
     private lateinit var _navController: NavController
 
     override fun onCreateView(
@@ -29,6 +31,7 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         _myView = view
+        _auth = FirebaseAuth.getInstance()
         _navController = Navigation.findNavController(view)
         closeSplashScreen()
 
@@ -36,7 +39,10 @@ class SplashFragment : Fragment() {
 
     private fun closeSplashScreen() {
         Handler(Looper.getMainLooper()).postDelayed({
-            _navController.navigate(R.id.loginFragment)
+            if(_auth.currentUser == null){
+                _navController.navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
+            }
+            _navController.navigate(SplashFragmentDirections.actionSplashFragmentToGamesFragment())
         }, SPLASH_DURATION)
     }
 

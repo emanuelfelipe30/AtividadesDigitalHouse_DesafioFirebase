@@ -7,4 +7,6 @@
     <color name="colorTextLink">#00A6FF</color>
     <color name="colorWhite">#FFF</color>
     <color name="color_white">#FFF</color>
+    <color name="colorTitle">#1F2D3D</color>
+    <color name="colorSubtitle">#8492A6</color>
 </resources>

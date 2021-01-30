@@ -5,4 +5,7 @@
     <dimen name="dm_16dp">16dp</dimen>
     <dimen name="dm_24dp">24dp</dimen>
     <dimen name="dm_8dp">8dp</dimen>
+    <dimen name="dm_title_game">20sp</dimen>
+    <dimen name="dm_subtitle_game">16sp</dimen>
+    <dimen name="dm_image_game_height">200dp</dimen>
 </resources>

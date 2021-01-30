@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dm_8dp"
+    app:cardCornerRadius="@dimen/dm_8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgGame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm_image_game_height"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/game_image"
+            tools:src="@drawable/background_image" />
+
+        <TextView
+            android:id="@+id/txtTitleGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/dm_8dp"
+            android:textAllCaps="true"
+            android:textSize="@dimen/dm_title_game"
+            android:textColor="@color/colorTitle"
+            tools:text="SPORT CLUBE RECIFE" />
+
+        <TextView
+            android:id="@+id/txtSubtitleGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/dm_8dp"
+            android:textSize="@dimen/dm_subtitle_game"
+            android:textColor="@color/colorSubtitle"
+            tools:text="1905" />
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

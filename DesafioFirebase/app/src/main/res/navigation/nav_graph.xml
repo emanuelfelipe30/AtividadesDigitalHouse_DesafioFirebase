@@ -12,7 +12,14 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"  />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -24,17 +31,15 @@
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_gamesFragment"
-            app:destination="@id/gamesFragment" />
+            app:destination="@id/gamesFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="br.com.emanuel.desafiofirebase.register.view.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_loginFragment2"
-            app:destination="@id/loginFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/gamesFragment"
         android:name="br.com.emanuel.desafiofirebase.games.view.GamesFragment"
